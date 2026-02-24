@@ -113,18 +113,18 @@ Hybrid auditing:
 
 ## Create Account
 
-curl -X POST http://localhost:8080/api/v1/accounts?customerId=UUID
+curl --location --request POST 'http://localhost:8080/api/v1/accounts'
 
 ## Topup
 
-curl -X POST http://localhost:8080/api/v1/transactions \
--H "X-Request-Id: REQ-001" \
--H "X-Channel: MOBILE" \
--H "Content-Type: application/json" \
--d '{
+curl --location 'http://localhost:8080/api/v1/transactions' \
+--header 'Content-Type: application/json' \
+--header 'X-Request-Id: REQ-TOPUP-001' \
+--header 'X-Channel: MOBILE' \
+--data '{
 "data": {
-"referenceNo": "TRX-001",
-"accountId": "UUID",
+"referenceNo": "TRX-TOPUP-001",
+"accountId": "0634fa38-fe33-4945-9113-7b5adebd7b4e",
 "amount": 100000,
 "type": "TOPUP"
 }
