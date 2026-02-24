@@ -41,7 +41,7 @@ All transaction APIs require headers:
 
 Example:
 
-X-Request-Id: REQ-001  
+X-Request-Id: REQ-TOPUP-001  
 X-Channel: MOBILE
 
 ---
@@ -141,7 +141,6 @@ curl --location 'http://localhost:8080/api/v1/transactions' \
 # 📌 Notes
 
 - Account ID = Customer ID
-- UUID from Identity Service
 - 1 Customer = 1 Wallet
 - Mutation table = Ledger
 
